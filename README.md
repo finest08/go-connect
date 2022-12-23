@@ -1,6 +1,6 @@
 # go-connect
 
-Understanding Connect with Go inside a messaging app
+Understanding Connect with Go inside a messaging app demo
 
 * Need to connect to Mongo DB to save users & messages
 
