@@ -1,0 +1,543 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "messaging/v1/messaging.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "MessagingService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/Create": {
+      "post": {
+        "summary": "create a message",
+        "operationId": "MessagingService_Create",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CreateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": "CreateRequest creates a message.",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CreateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MessagingService"
+        ]
+      }
+    },
+    "/CreateUser": {
+      "post": {
+        "summary": "create a user",
+        "operationId": "MessagingService_CreateUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CreateUserResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": "CreateRequest creates a message.",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CreateUserRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MessagingService"
+        ]
+      }
+    },
+    "/Delete": {
+      "post": {
+        "summary": "delete a message by id",
+        "operationId": "MessagingService_Delete",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1DeleteResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": "DeleteRequest deletes a message by id.",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1DeleteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MessagingService"
+        ]
+      }
+    },
+    "/DeleteUser": {
+      "post": {
+        "summary": "get a message by id",
+        "operationId": "MessagingService_DeleteUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1DeleteUserResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": "DeleteRequest deletes a user by id.",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1DeleteUserRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MessagingService"
+        ]
+      }
+    },
+    "/Get": {
+      "post": {
+        "summary": "get a message by id",
+        "operationId": "MessagingService_Get",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": "GetRequest gets a message by id.",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1GetRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MessagingService"
+        ]
+      }
+    },
+    "/GetUser": {
+      "post": {
+        "summary": "get a message by id",
+        "operationId": "MessagingService_GetUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetUserResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": "GetRequest gets a user by id.",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1GetUserRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MessagingService"
+        ]
+      }
+    },
+    "/Query": {
+      "post": {
+        "summary": "list messages",
+        "operationId": "MessagingService_Query",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1QueryResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": "QueryRequest gets a list of messages.",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1QueryRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MessagingService"
+        ]
+      }
+    },
+    "/Update": {
+      "post": {
+        "summary": "add more messages",
+        "operationId": "MessagingService_Update",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1UpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": "UpdateRequest updates a message.",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1UpdateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MessagingService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v1CreateRequest": {
+      "type": "object",
+      "properties": {
+        "messageThread": {
+          "$ref": "#/definitions/v1MessageThread"
+        }
+      },
+      "description": "CreateRequest creates a message."
+    },
+    "v1CreateResponse": {
+      "type": "object",
+      "properties": {
+        "messageThread": {
+          "$ref": "#/definitions/v1MessageThread"
+        }
+      },
+      "description": "CreateResponse returns a message."
+    },
+    "v1CreateUserRequest": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/v1User"
+        }
+      },
+      "description": "CreateRequest creates a message."
+    },
+    "v1CreateUserResponse": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/v1User"
+        }
+      },
+      "description": "CreateResponse returns a message."
+    },
+    "v1DeleteRequest": {
+      "type": "object",
+      "properties": {
+        "messageId": {
+          "type": "string"
+        }
+      },
+      "description": "DeleteRequest deletes a message by id."
+    },
+    "v1DeleteResponse": {
+      "type": "object",
+      "properties": {
+        "messageThread": {
+          "$ref": "#/definitions/v1MessageThread"
+        }
+      },
+      "description": "DeleteResponse returns an empty response and can be ignored."
+    },
+    "v1DeleteUserRequest": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        }
+      },
+      "description": "DeleteRequest deletes a user by id."
+    },
+    "v1DeleteUserResponse": {
+      "type": "object",
+      "description": "DeleteResponse returns an empty response and can be ignored."
+    },
+    "v1GetRequest": {
+      "type": "object",
+      "properties": {
+        "messageId": {
+          "type": "string"
+        }
+      },
+      "description": "GetRequest gets a message by id."
+    },
+    "v1GetResponse": {
+      "type": "object",
+      "properties": {
+        "messageThread": {
+          "$ref": "#/definitions/v1MessageThread"
+        }
+      },
+      "description": "GetResponse returns a message by id."
+    },
+    "v1GetUserRequest": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        }
+      },
+      "description": "GetRequest gets a user by id."
+    },
+    "v1GetUserResponse": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "$ref": "#/definitions/v1User"
+        }
+      },
+      "description": "GetResponse returns a user by id."
+    },
+    "v1MessageThread": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/v1Messages"
+          }
+        },
+        "user": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/v1User"
+          }
+        }
+      },
+      "title": "message threads between users"
+    },
+    "v1Messages": {
+      "type": "object",
+      "properties": {
+        "body": {
+          "type": "string"
+        },
+        "sender": {
+          "type": "string"
+        },
+        "receiver": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "int64"
+        }
+      },
+      "title": "individual messages"
+    },
+    "v1QueryRequest": {
+      "type": "object",
+      "properties": {
+        "offset": {
+          "type": "string",
+          "format": "int64"
+        },
+        "limit": {
+          "type": "string",
+          "format": "int64"
+        },
+        "searchText": {
+          "type": "string"
+        }
+      },
+      "description": "QueryRequest gets a list of messages."
+    },
+    "v1QueryResponse": {
+      "type": "object",
+      "properties": {
+        "cursor": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/v1MessageThread"
+          }
+        },
+        "matches": {
+          "type": "string",
+          "format": "int64"
+        }
+      },
+      "description": "QueryResponse returns a list of messages."
+    },
+    "v1UpdateRequest": {
+      "type": "object",
+      "properties": {
+        "messageId": {
+          "type": "string"
+        },
+        "messageThread": {
+          "$ref": "#/definitions/v1MessageThread"
+        },
+        "updateMask": {
+          "type": "string"
+        }
+      },
+      "description": "UpdateRequest updates a message."
+    },
+    "v1UpdateResponse": {
+      "type": "object",
+      "properties": {
+        "messageThread": {
+          "$ref": "#/definitions/v1MessageThread"
+        }
+      },
+      "description": "UpdateResponse returns a message."
+    },
+    "v1User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "int64"
+        },
+        "deleted": {
+          "type": "boolean"
+        }
+      },
+      "title": "people involved in the message thread"
+    }
+  }
+}
